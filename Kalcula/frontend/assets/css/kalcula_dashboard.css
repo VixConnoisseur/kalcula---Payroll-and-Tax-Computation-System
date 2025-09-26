@@ -1,0 +1,112 @@
+/* ================================
+   Kalcula Dashboard Custom Styles
+   ================================ */
+
+/* Root Colors (Slate, Terracotta, Cream) */
+:root {
+  --slate: #64748b;
+  --terracotta: #e2725b;
+  --cream: #fdf6ec;
+}
+
+/* General Layout */
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, var(--slate), var(--terracotta));
+  color: var(--slate);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+header h1 {
+  letter-spacing: 1px;
+  color: var(--cream);
+}
+
+header a {
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+header a:hover {
+  background-color: var(--terracotta);
+  color: #fff;
+}
+
+/* Dashboard Cards */
+.bg-cream {
+  background: var(--cream);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-cream:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Quick Links */
+.grid a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid a:hover {
+  background-color: var(--terracotta);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Recent Payslips List */
+ul li {
+  transition: background 0.2s ease;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+ul li:hover {
+  background: rgba(100, 116, 139, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .grid a {
+    font-size: 1rem;
+    padding: 1.25rem;
+  }
+
+  .bg-cream p {
+    font-size: 2rem;
+  }
+}
